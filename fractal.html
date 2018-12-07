@@ -1,0 +1,30 @@
+<HTML>
+	<HEAD>
+		<TITLE>Fractal</TITLE>
+	</HEAD>
+	
+	<BODY>
+		<DIV id = "display-container">
+			<CANVAS id = "canvas"></canvas>
+		</DIV>
+		
+		<script type="text/javascript">
+			// Add the main script to the page
+			function prepScript() {
+				var element = document.createElement("script");
+				element.src = "fractal.js";
+				document.body.appendChild(element);
+			}
+			
+			// Wait for the script to be ready then run it
+			if (window.addEventListener) {
+				window.addEventListener("load", prepScript, false);
+			} else if (window.attachEvent) {
+				window.attachEvent("onload", prepScript);
+			} else {
+				window.onload = prepScript;
+			}
+		</script>
+
+	</BODY>
+</HTML>
